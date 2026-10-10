@@ -122,6 +122,7 @@ public class RoadBuilder : MonoBehaviour
             Vector3 spawnPos = grid.GetNodeCenter(node);
             GameObject road = Instantiate(roadPrefab, spawnPos, Quaternion.identity);
             placedRoads.Add(node.GridIndex, road);
+            node.SetObject(road);
         }
     }
 }
